@@ -1,0 +1,88 @@
+@import url("../../../assets/libs/css/montserrat_font.css");
+
+html {
+    background-color: #1d1d1d;
+}
+
+body {
+    max-width: 780px;
+    margin: 7px 17px 0 17px;
+
+    font-family: 'Montserrat Light', serif;
+    text-align: center;
+
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+    background-color: white;
+}
+
+header {
+    padding: 27px 0 17px 0;
+    opacity: 0;
+    border-bottom: 1px solid lightgray;
+    font-size: 14px;
+}
+
+.avatar {
+    width: 50%;
+    max-width: 300px;
+    border-radius: 50% !important;
+    cursor: pointer;
+}
+
+nav {
+    padding: 1px 0 1px 0;
+    color: lightgray;
+    opacity: 0;
+    font-size: 15px;
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    pointer-events: none;
+    margin: 0px;
+    width: auto;
+    padding: 17px 17px 17px 17px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    font-size: 14px;
+}
+
+.tab-content.open {
+    display: block;
+    opacity: 0;
+    max-height: none;
+    pointer-events: all;
+}
+
+.tab.open {
+    color: white;
+    background-color: #2992B8;
+}
+
+.project-lang-title {
+    font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 0;
+}
+
+a {
+    color: #2992B8;
+    text-decoration: none;
+}
+
+footer {
+    font-size: 10px;
+    margin: 17px 0 17px 0;
+    opacity: 0;
+}

@@ -1,0 +1,118 @@
+@import url("../libs/css/montserrat_font.css");
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    min-height: 210px;
+
+    color: black;
+    font-family: 'Montserrat Light', serif;
+    overflow: hidden;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#content::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+}
+
+#content .particles-js-canvas-el {
+    position: absolute;
+    opacity: 0;
+    background: linear-gradient(to top left, #212121, #000 90%);
+}
+
+#interface {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+#interface .panel {
+    display: inline-block;
+    background-color: white;
+    height: 400px;
+    pointer-events:all;
+}
+
+#interface .left {
+    width: 210px;
+    border-right: 1px lightgray solid;
+    opacity: 0;
+}
+
+#interface .right {
+    width: 600px;
+    opacity: 0;
+}
+
+#interface .avatar {
+    width: 150px;
+}
+
+#interface .avatar-wrapper {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin: 27px 27px 27px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#interface .left .desc {
+    margin: 0 0 0 27px;
+    font-size: 14px;
+}
+
+#interface .left .nick {
+    margin-bottom: 7px;
+}
+
+#interface .left .github {
+}
+
+footer {
+    position: fixed;
+    bottom: 7px;
+    color: white;
+    text-align: center;
+    font-size: 11px;
+    left: calc(50% - 44px);
+    opacity: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #2992B8;
+}
+
+ul {
+    margin-top: 0;
+    padding-top: 0;
+}
