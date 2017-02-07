@@ -43,7 +43,7 @@ particlesJS("content", {
             "random": true,
             "anim": {
                 "enable": false,
-                "speed": 40,
+                "speed": 50,
                 "size_min": 0.1,
                 "sync": false
             }
@@ -80,7 +80,7 @@ particlesJS("content", {
                 "size": 40,
                 "duration": 2,
                 "opacity": 8,
-                "speed": 3
+                "speed": 5
             },
             "repulse": {
                 "distance": 200,

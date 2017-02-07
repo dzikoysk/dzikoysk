@@ -5,7 +5,7 @@ html, body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-color: #111111;
     min-height: 210px;
 
     color: black;
@@ -35,7 +35,7 @@ body {
 #content .particles-js-canvas-el {
     position: absolute;
     opacity: 0;
-    background: linear-gradient(to top left, #212121, #000 90%);
+    background: linear-gradient(to top left, #4A0031, #111111 89%);
 }
 
 #interface {
@@ -109,7 +109,7 @@ footer {
 
 a {
     text-decoration: none;
-    color: #2992B8;
+    color: #C00480;;
 }
 
 ul {
