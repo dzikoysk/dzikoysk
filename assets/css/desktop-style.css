@@ -35,7 +35,7 @@ body {
 #content .particles-js-canvas-el {
     position: absolute;
     opacity: 0;
-    background: linear-gradient(to top left, #4A0031, #111111 89%);
+    background: linear-gradient(to top left, #4A0031, #000 125%);
 }
 
 #interface {
@@ -109,7 +109,7 @@ footer {
 
 a {
     text-decoration: none;
-    color: #C00480;;
+    color: #af0476;;
 }
 
 ul {

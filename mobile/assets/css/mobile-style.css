@@ -60,7 +60,7 @@ nav {
 
 .tab.open {
     color: white;
-    background-color: #2992B8;
+    background-color: #af0476;
 }
 
 .project-lang-title {
@@ -77,7 +77,7 @@ li {
 }
 
 a {
-    color: #2992B8;
+    color: #af0476;
     text-decoration: none;
 }
 
