@@ -28,7 +28,7 @@
 }
 
 .tab {
-    color: black;
+    color: white;
     font-size: 14px;
     padding: 12px 17px;
     cursor: pointer;
@@ -37,5 +37,5 @@
 
 .tab:hover,
 .tab.open {
-    border-bottom: 2px solid #C00480;
+    border-bottom: 2px solid #06ffde;
 }
