@@ -1,7 +1,7 @@
 @import url("../../../assets/libs/css/montserrat_font.css");
 
 html {
-    background-color: #1d1d1d;
+    background-color: #111111;
 }
 
 body {
@@ -14,13 +14,14 @@ body {
     -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0, 0.75);
     -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
-    background-color: white;
+    background-color: rgba(31, 31, 31, 0.9);
+    color: white;
 }
 
 header {
     padding: 27px 0 17px 0;
     opacity: 0;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #3e3e3e;
     font-size: 14px;
 }
 
@@ -32,7 +33,6 @@ header {
 }
 
 nav {
-    padding: 1px 0 1px 0;
     color: lightgray;
     opacity: 0;
     font-size: 15px;
@@ -46,8 +46,8 @@ nav {
     margin: 0px;
     width: auto;
     padding: 17px 17px 17px 17px;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
+    border-top: 1px solid #3e3e3e;
+    border-bottom: 1px solid #3e3e3e;
     font-size: 14px;
 }
 
@@ -60,7 +60,7 @@ nav {
 
 .tab.open {
     color: white;
-    background-color: #af0476;
+    background-color: #373737;
 }
 
 .project-lang-title {
@@ -77,7 +77,7 @@ li {
 }
 
 a {
-    color: #af0476;
+    color: #06ffde;
     text-decoration: none;
 }
 

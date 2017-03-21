@@ -58,9 +58,6 @@ body::before {
     justify-content: center;
     align-items: center;
     pointer-events: none;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0, 0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 #interface .panel {
@@ -68,6 +65,9 @@ body::before {
     height: 400px;
     pointer-events:all;
     background-color: rgba(31, 31, 31, 0.9);
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0, 0.4);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.4);
+    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.4);
 }
 
 #interface .left {
