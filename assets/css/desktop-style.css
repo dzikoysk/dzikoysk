@@ -18,10 +18,6 @@ body {
 }
 
 body::before {
-    background-image: url('/assets/images/clouds.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
     opacity: 0.7;
 }
 
@@ -43,9 +39,6 @@ body::before {
 #content .particles-js-canvas-el {
     position: absolute;
     opacity: 0;
-    /*
-    background: linear-gradient(to top left, #4A0031, #000 150%);
-    */
 }
 
 #interface {
