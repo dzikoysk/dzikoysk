@@ -1,4 +1,4 @@
-@import url("../../../assets/libs/css/montserrat_font.css");
+@import url("../libs/css/montserrat_font.css");
 
 html {
     background-color: #111111;
@@ -6,7 +6,7 @@ html {
 
 body {
     max-width: 780px;
-    margin: 7px 17px 0 17px;
+    margin: 7px 17px 7px 17px;
 
     font-family: 'Montserrat Light', serif;
     text-align: center;
@@ -43,7 +43,7 @@ nav {
     opacity: 0;
     max-height: 0;
     pointer-events: none;
-    margin: 0px;
+    margin: 0;
     width: auto;
     padding: 17px 17px 17px 17px;
     border-top: 1px solid #3e3e3e;
@@ -63,9 +63,30 @@ nav {
     background-color: #373737;
 }
 
-.project-lang-title {
+.list-title {
     font-size: 16px;
 }
+
+.list-title:before {
+    content: '~ ';
+}
+
+.list-title:after {
+    content: ' ~';
+}
+
+.brainfuck-theme {
+    word-wrap: break-word;
+    color: #3e3e3e;
+}
+
+footer {
+    font-size: 10px;
+    margin: 17px 0 17px 0;
+    opacity: 0;
+}
+
+/* General */
 
 ul {
     list-style-type: none;
@@ -79,10 +100,4 @@ li {
 a {
     color: #06ffde;
     text-decoration: none;
-}
-
-footer {
-    font-size: 10px;
-    margin: 17px 0 17px 0;
-    opacity: 0;
 }

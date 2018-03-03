@@ -91,15 +91,25 @@ body::before {
 }
 
 #interface .left .desc {
-    margin: 0 0 0 27px;
+    margin: 0 0 0 17px;
     font-size: 14px;
+    width: 100%;
+    display: block;
 }
 
 #interface .left .nick {
-    margin-bottom: 7px;
+    margin-bottom: 10px;
 }
 
-#interface .left .github {
+#interface .left .desc-link {
+    font-size: 12px;
+    margin-top: 4px;
+    margin-left: 19px;
+}
+
+.brainfuck-theme {
+    word-wrap: break-word;
+    color: #3e3e3e;
 }
 
 footer {
@@ -111,6 +121,8 @@ footer {
     left: calc(50% - 44px);
     opacity: 0;
 }
+
+/* General */
 
 a {
     text-decoration: none;
