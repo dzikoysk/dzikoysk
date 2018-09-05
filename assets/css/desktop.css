@@ -1,4 +1,4 @@
-@import url("../libs/css/montserrat_font.css");
+@import url("../libs/css/montserrat-font.css");
 
 html, body {
     width: 100vw;
@@ -110,6 +110,13 @@ body::before {
 .brainfuck-theme {
     word-wrap: break-word;
     color: #3e3e3e;
+    font-size: 13px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 footer {
@@ -122,11 +129,27 @@ footer {
     opacity: 0;
 }
 
-/* General */
+ul li {
+    margin-top: 1px;
+}
 
 a {
     text-decoration: none;
+    /*
     color: #06ffde;
+    */
+    color: #e31c65;
+}
+
+.color {
+    color: #ff0047;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.comma {
+    font-family: monospace;
 }
 
 ul {

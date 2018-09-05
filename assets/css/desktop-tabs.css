@@ -37,5 +37,5 @@
 
 .tab:hover,
 .tab.open {
-    border-bottom: 2px solid #06ffde;
+    border-bottom: 2px solid #e31c65 /*#06ffde*/;
 }
