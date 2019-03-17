@@ -14,6 +14,7 @@ PandaRequest.prototype.get = function (url, onLoad) {
 
 PandaRequest.prototype.loadContent = function(element, url) {
     var instance = this;
+
     this.get(url, function (response) {
         element.html(response);
         --instance.requests;
@@ -28,4 +29,4 @@ PandaRequest.prototype.loadContent = function(element, url) {
 
 PandaRequest.prototype.addOnLoadListener = function(listener) {
     this.onLoadListeners.push(listener);
-}
+};

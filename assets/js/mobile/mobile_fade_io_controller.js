@@ -1,13 +1,13 @@
 window.onload = function() {
     animateBackground();
     setTimeout(animateNav, 800);
-    setTimeout(animateOpened, 1600)
+    setTimeout(animateOpened, 1600);
     setTimeout(animateFooter, 2400);
-}
+};
 
 window.onbeforeunload = function () {
     fx.animate(q('body'), 'opacity', 0, 400);
-}
+};
 
 function animateBackground() {
     var contentElement = q('header');

@@ -11,11 +11,9 @@ function check() {
         return;
     }
 
-    var w = window.innerWidth
-        || document.documentElement.clientWidth
-        || document.body.clientWidth;
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-    if (w > 800) {
+    if (width > 800) {
         red = true;
         window.location = "https://dzikoysk.net/";
     }

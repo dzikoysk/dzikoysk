@@ -2,7 +2,7 @@ var hash = window.location.hash;
 var tabPane = q('.tab-pane');
 var defaultTab;
 
-if (hash == null || hash == "") {
+if (hash == null || hash === "") {
     defaultTab = 'about';
 }
 else {
