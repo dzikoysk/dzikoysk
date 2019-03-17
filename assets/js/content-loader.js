@@ -5,10 +5,11 @@ function PandaRequest(requests) {
 
 PandaRequest.prototype.get = function (url, onLoad) {
     var req = new XMLHttpRequest();
-    req.open('GET', url, true);
     req.onload = function () {
         onLoad(req.responseText);
     };
+
+    req.open('GET', url, true);
     req.send(null);
 };
 
