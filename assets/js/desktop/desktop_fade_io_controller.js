@@ -32,6 +32,6 @@ function animateOpened() {
 
 function animateFooter() {
     var footer = q('footer');
-    fx.animate(footer, 'opacity', 0.5, 1000);
+    fx.animate(footer, 'opacity', 0.6, 1000);
 }
 

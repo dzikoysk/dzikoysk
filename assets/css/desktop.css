@@ -10,7 +10,7 @@ html, body {
     color: white;
     font-family: 'Montserrat Light', serif;
     overflow: hidden;
-    background-color: #111111;
+    background-color: #191919;
 }
 
 body {
@@ -57,7 +57,7 @@ body::before {
     display: inline-block;
     height: 400px;
     pointer-events:all;
-    background-color: rgba(31, 31, 31, 0.9);
+    background-color: rgba(35, 35, 35, 0.9);
     -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0, 0.4);
     -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.4);
     box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.4);
@@ -138,11 +138,11 @@ a {
     /*
     color: #06ffde;
     */
-    color: #c8a4da;
+    color: #62debc;
 }
 
 .color {
-    color: #c8a4da;
+    color: #62debc;
     font-weight: bold;
     font-family: sans-serif;
     font-size: 11px;
