@@ -1,5 +1,6 @@
-# Portfolio
-
-~ [dzikoysk.net](https://dzikoysk.net)
-
-![Preview](https://user-images.githubusercontent.com/4235722/54491459-103e9100-48bf-11e9-84f8-f6b375be0bba.png)
+Quick summary of what [I](https://dzikoysk.net/) do lately:
+* Author of [Reposilite](https://github.com/dzikoysk/reposilite) & [Reposilite Playground](https://github.com/reposilite-playground/)
+* Active member of [Javalin](https://github.com/javalin/)
+* Praying for [Panda](https://github.com/panda-lang/panda)
+* Experimenting with daily routine management through [Presence of Mind](https://github.com/dzikoysk/presence-of-mind) app
+* Posting random stuff on [Twitter](https://twitter.com/dzikoysk)
