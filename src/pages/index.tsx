@@ -56,12 +56,12 @@ export default function Index() {
         h={'100vh'}
         color={'white'}
         justifyContent={{
-          md: 'space-between'
+          lg: 'space-between'
         }}
         overflowX={'hidden'}
         flexDirection={{
           base: 'column',
-          md: 'row'
+          lg: 'row'
         }}
       >
         <Box
@@ -73,26 +73,27 @@ export default function Index() {
           bgColor={'black'}
         >
           <Image
-            src={'/img/noise.jpg'}
+            src={'/img/noise_raw.jpg'}
+            loading={'eager'}
             opacity={currentPage !== undefined ? 0.33 : 0.22}
-            minW={'max(100%, 100vh)'}
-            minH={'max(100%, 100vw)'}
+            minW={{ base: 'max(100vw, 100vh)' }}
+            minH={{ base: 'max(100vw, 100vh)' }}
             objectFit={'cover'}
             transition={'opacity 0.25s ease-in-out'}
-            animation={`${rotation} 1420s linear infinite`}
+            animation={`${rotation} 1300s linear infinite`}
           />
         </Box>
         <Flex
-          flex={2}
-          h={'100vh'}
+          flex={{ lg: 2 }}
+          h={{ lg: '100vh' }}
           minW={'60%'}
           alignItems={'center'}
           justifyContent={{
-            md: 'space-around'
+            lg: 'space-around'
           }}
           flexDirection={{
             base: 'column',
-            md: 'row'
+            lg: 'row'
           }}
         >
           <Stack
@@ -100,6 +101,10 @@ export default function Index() {
             cursor='pointer'
             paddingX={4}
             paddingY={12}
+            textAlign={{
+              base: 'center',
+              lg: 'left'
+            }}
           >
             <Text w={'full'} fontFamily={'monospace'} color={'purple.300'}>
               /dzikoysk
@@ -114,12 +119,15 @@ export default function Index() {
               description="Who I am and what I do"
               onClick={() => togglePage(SelectedPage.About)}
             >
-              <Text>External links:</Text>
-              <Link href={'https://github.com/dzikoysk'}>~ github.com/dzikoysk</Link>
-              <Link href={'https://twitter.com/dzikoysk'}>~ twitter.com/dzikoysk</Link>
-              <Link href={'https://linkedin.com/in/dzikoysk'}>~ linkedin.com/dzikoysk</Link>
-              <Link href={'https://stackoverflow.com/dzikoysk'}>~ stackoverflow.com/dzikoysk</Link>
-              <Link href={'https://musescore.com/dzikoysk'}>~ musescore.com/dzikoysk</Link>
+              <Text fontWeight={'semibold'}>External links &#123;</Text>
+              <Stack spacing={0} paddingLeft={4}>
+                <Link href={'https://github.com/dzikoysk'}>~ github.com/dzikoysk</Link>
+                <Link href={'https://twitter.com/dzikoysk'}>~ twitter.com/dzikoysk</Link>
+                <Link href={'https://linkedin.com/in/dzikoysk'}>~ linkedin.com/dzikoysk</Link>
+                <Link href={'https://stackoverflow.com/dzikoysk'}>~ stackoverflow.com/dzikoysk</Link>
+                <Link href={'https://musescore.com/dzikoysk'}>~ musescore.com/dzikoysk</Link>
+              </Stack>
+              <Text fontWeight={'semibold'}>&#125;</Text>
             </IndexCard>
             <IndexCard
               title='Projects'
@@ -142,14 +150,14 @@ export default function Index() {
           <Stack
             bgColor={'black'}
             color={'white'}
-            h={'full'}
+            w={'full'}
+            minH={'full'}
             maxH={{
               lg: '100vh'
             }}
             overflowY={{
               lg: 'auto'
             }}
-            w={'full'}
             justifyContent={'safe center'}
             alignItems={'safe center'}
             paddingX={10}
@@ -236,14 +244,14 @@ const IndexCard = ({ title, description, onClick, children }: IndexCardProps) =>
           {description}
         </Heading>
         {children && <Stack
-          color={'#909098'}
+          color={'purple.300'}
           fontWeight=''
           paddingTop={2}
           spacing={0}
           fontFamily={'monospace'}
           fontSize={{
             base: 'xs',
-            lg: 'sm'
+            lg: 'xs'
           }}
           textAlign={{
             base: 'right',
@@ -273,6 +281,9 @@ const HorizontalCollapse = forwardRef<HorizontalCollapseProps, 'div'>((props, re
       onAnimationStart={() => { setHidden(false)}}
       onAnimationComplete={() => setHidden(!show)}
       animate={{ width: show ? '100%' : 0 }}
+      style={{
+        height: '100%',
+      }}
     >
       {props.children}
     </motion.div>

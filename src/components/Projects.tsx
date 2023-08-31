@@ -34,9 +34,9 @@ const projects = [
         role: Role.OWNER
       },
       {
-        title: 'javalin/javalin-reactive-routing',
+        title: 'javalin/javalin-routing-extensions',
         description: 'Set of alternative routing implementations for Javalin 5.x ',
-        link: 'https://github.com/javalin/javalin-reactive-routing',
+        link: 'https://github.com/javalin/javalin-routing-extensions',
         role: Role.OWNER
       }
     ]
