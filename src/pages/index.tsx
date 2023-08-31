@@ -1,20 +1,21 @@
 import Head from 'next/head'
 import {
-  Box, BoxProps, Collapse,
+  Box,
   Flex, forwardRef,
   Heading, Image, keyframes,
   Link,
   Stack,
-  Text, useDisclosure
+  Text
 } from "@chakra-ui/react";
-import React, {PropsWithChildren, useState} from "react";
+import React, {PropsWithChildren, useEffect, useState} from "react";
 import { motion } from "framer-motion";
 import {useRouter} from "next/router";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Music from "@/components/Music";
-import {Content} from "next/dist/compiled/@next/font/dist/google";
 import Contact from "@/components/Contact";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import {useParams} from "next/navigation";
 
 const rotation = keyframes({
   'from': {
@@ -34,14 +35,18 @@ enum SelectedPage {
 }
 
 export default function Index() {
-  // #212123
-  // #151515
   const router = useRouter()
+  const params = useParams()
   const [currentPage, setCurrentPage] = useState<SelectedPage | undefined>(undefined)
 
-  const togglePage = (selectedPage: SelectedPage) => {
+  useEffect(() => {
+    const hash = window.location.hash
+    if (hash) setCurrentPage(hash.substring(1) as SelectedPage)
+  }, [params]);
+
+  const togglePage = (selectedPage: SelectedPage | undefined) => {
     setCurrentPage(currentPage === selectedPage ? undefined : selectedPage)
-    router.push('/' + (currentPage === selectedPage ? `` : `#${selectedPage}`))
+    router.push('/' + (currentPage === selectedPage ? `` : (selectedPage ? `#${selectedPage}` : '')))
   }
 
   return (
@@ -97,7 +102,7 @@ export default function Index() {
           }}
         >
           <Stack
-            onClick={() => setCurrentPage(undefined)}
+            onClick={() => togglePage(undefined)}
             cursor='pointer'
             paddingX={4}
             paddingY={12}
