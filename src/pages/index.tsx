@@ -55,8 +55,14 @@ export default function Index() {
         maxW={'100vw'}
         h={'100vh'}
         color={'white'}
-        justifyContent={'space-between'}
+        justifyContent={{
+          md: 'space-between'
+        }}
         overflowX={'hidden'}
+        flexDirection={{
+          base: 'column',
+          md: 'row'
+        }}
       >
         <Box
           position={'absolute'}
@@ -67,24 +73,34 @@ export default function Index() {
           bgColor={'black'}
         >
           <Image
-            // src={'/img/concrete-wall-texture.jpg'}
             src={'/img/noise.jpg'}
-            opacity={currentPage !== undefined ? 0.2 : 0.1}
-            w={'max(100%, 100vh)'}
-            h={'max(100%, 100vw)'}
+            opacity={currentPage !== undefined ? 0.33 : 0.22}
+            minW={'max(100%, 100vh)'}
+            minH={'max(100%, 100vw)'}
             objectFit={'cover'}
             transition={'opacity 0.25s ease-in-out'}
-            animation={`${rotation} 1080s linear infinite`}
+            animation={`${rotation} 1420s linear infinite`}
           />
         </Box>
         <Flex
           flex={2}
           h={'100vh'}
-          alignItems={'center'}
-          justifyContent={'space-around'}
           minW={'60%'}
+          alignItems={'center'}
+          justifyContent={{
+            md: 'space-around'
+          }}
+          flexDirection={{
+            base: 'column',
+            md: 'row'
+          }}
         >
-          <Stack onClick={() => setCurrentPage(undefined)} cursor='pointer' padding={4}>
+          <Stack
+            onClick={() => setCurrentPage(undefined)}
+            cursor='pointer'
+            paddingX={4}
+            paddingY={12}
+          >
             <Text w={'full'} fontFamily={'monospace'} color={'purple.300'}>
               /dzikoysk
             </Text>
@@ -92,7 +108,7 @@ export default function Index() {
               INDEX
             </Heading>
           </Stack>
-          <Stack alignItems={'start'} spacing={6} paddingRight={4}>
+          <Stack alignItems={'start'} spacing={6} paddingBottom={{ base: 12, lg: 0 }} paddingX={4}>
             <IndexCard
               title='About'
               description="Who I am and what I do"
@@ -127,8 +143,12 @@ export default function Index() {
             bgColor={'black'}
             color={'white'}
             h={'full'}
-            maxH={'100vh'}
-            overflowY={'auto'}
+            maxH={{
+              lg: '100vh'
+            }}
+            overflowY={{
+              lg: 'auto'
+            }}
             w={'full'}
             justifyContent={'safe center'}
             alignItems={'safe center'}
@@ -173,18 +193,23 @@ const IndexCard = ({ title, description, onClick, children }: IndexCardProps) =>
     <Flex
       _hover={{bgColor: '#151515DD'}}
       paddingY={3}
-      paddingX={8}
+      paddingX={4}
       rounded={'lg'}
-      flexBasis={'100%'}
       w='full'
+      flexBasis={'100%'}
+      justifyContent={{
+        base: 'space-between',
+        lg: 'flex-start'
+      }}
       cursor={'pointer'}
       onClick={onClick}
     >
       <Heading
         as='h2'
         size={'xs'}
-        w={28}
+        minW={{ base: '90px', lg: 28}}
         pt={1.5}
+        pl={2}
         fontWeight={'semibold'}
         fontFamily={'Livvic'}
         textTransform={'uppercase'}
@@ -194,17 +219,36 @@ const IndexCard = ({ title, description, onClick, children }: IndexCardProps) =>
       <Text color={'purple.300'}>
         /
       </Text>
-      <Stack paddingLeft={10}>
-        <Heading as='h3' size={'md'} fontFamily={'Lato'}>
+      <Stack
+        paddingLeft={{ base: 6, lg: 10}}
+        w={{ base: '60%', lg: 'full' }}
+      >
+        <Heading
+          as='h3'
+          size={'md'}
+          fontFamily={'Lato'}
+          w={'full'}
+          textAlign={{
+            base: 'right',
+            lg: 'left'
+          }}
+        >
           {description}
         </Heading>
         {children && <Stack
-          color={'#808085'}
+          color={'#909098'}
           fontWeight=''
           paddingTop={2}
           spacing={0}
           fontFamily={'monospace'}
-          fontSize='sm'
+          fontSize={{
+            base: 'xs',
+            lg: 'sm'
+          }}
+          textAlign={{
+            base: 'right',
+            lg: 'left'
+          }}
         >
           {children}
         </Stack>}

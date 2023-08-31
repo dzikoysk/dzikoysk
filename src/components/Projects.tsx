@@ -145,7 +145,7 @@ export default function Projects() {
         ))}
       </Stack>
       <Heading py={4}>Archived</Heading>
-      <Link href={'https://github.com/dzikoysk-playground'} color={'purple.300'}>
+      <Link href={'https://github.com/dzikoysk-playground'} color={'purple.300'} fontSize={'sm'}>
         ~ dzikoysk's playground
       </Link>
     </>
