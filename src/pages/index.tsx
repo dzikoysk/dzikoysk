@@ -125,15 +125,33 @@ export default function Index() {
               description="Who I am and what I do"
               onClick={() => togglePage(SelectedPage.About)}
             >
-              <Text fontWeight={'semibold'}>External links &#123;</Text>
-              <Stack spacing={0} paddingLeft={4}>
-                <Link href={'https://github.com/dzikoysk'}>~ github.com/dzikoysk</Link>
-                <Link href={'https://twitter.com/dzikoysk'}>~ twitter.com/dzikoysk</Link>
-                <Link href={'https://linkedin.com/in/dzikoysk'}>~ linkedin.com/dzikoysk</Link>
-                <Link href={'https://stackoverflow.com/dzikoysk'}>~ stackoverflow.com/dzikoysk</Link>
-                <Link href={'https://musescore.com/dzikoysk'}>~ musescore.com/dzikoysk</Link>
+              <Text
+                fontWeight={'semibold'}
+              >
+                External links
+                <Text as={'span'} display={{ base: 'none', lg: 'inline' }}>
+                  &nbsp;&#123;
+                </Text>
+                <Text as={'span'} display={{ base: 'inline', lg: 'none' }}>
+                  :
+                </Text>
+              </Text>
+              <Stack
+                spacing={0}
+                paddingLeft={{ base: 0, lg: 4 }}
+              >
+                <Link href={'https://github.com/dzikoysk'}>~ github::dzikoysk</Link>
+                <Link href={'https://twitter.com/dzikoysk'}>~ twitter::dzikoysk</Link>
+                <Link href={'https://linkedin.com/in/dzikoysk'}>~ linkedin::dzikoysk</Link>
+                <Link href={'https://stackoverflow.com/dzikoysk'}>~ stack::dzikoysk</Link>
+                <Link href={'https://musescore.com/dzikoysk'}>~ musescore::dzikoysk</Link>
               </Stack>
-              <Text fontWeight={'semibold'}>&#125;</Text>
+              <Text
+                fontWeight={'semibold'}
+                display={{ base: 'none', lg: 'inline' }}
+              >
+                &#125;
+              </Text>
             </IndexCard>
             <IndexCard
               title='Projects'
