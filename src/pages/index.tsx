@@ -34,6 +34,11 @@ enum SelectedPage {
   Contact = 'contact',
 }
 
+const meta = {
+  title: '~ dzikoysk :wq',
+  description: 'Hobbyist \'full-of-nothing-stack\' developer involved in many open source activities. 💕'
+}
+
 export default function Index() {
   const router = useRouter()
   const params = useParams()
@@ -52,8 +57,21 @@ export default function Index() {
   return (
     <>
       <Head>
-        <title>~ dzikoysk :wq</title>
-        <link rel="icon" href="/img/paw.png" />
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.description} />
+
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.description} />
+        <meta property="og:image" content="https://dzikoysk.net/images/opengraph.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:url" content="https://dzikoysk.net" />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:domain" content="dzikoysk.net" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.description} />
+        <meta name="twitter:image" content="https://dzikoysk.net/images/twitter.png" />
+        <meta name="twitter:url" content="https://dzikoysk.net/" />
       </Head>
       <Flex
         w={'full'}
@@ -78,7 +96,7 @@ export default function Index() {
           bgColor={'black'}
         >
           <Image
-            src={'/img/noise.jpg'}
+            src={'/images/noise.jpg'}
             alt={'Background noise'}
             loading={'eager'}
             opacity={currentPage !== undefined ? 0.33 : 0.22}
