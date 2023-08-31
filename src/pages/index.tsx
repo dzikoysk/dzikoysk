@@ -2,10 +2,11 @@ import Head from 'next/head'
 import {
   Box,
   Flex, forwardRef,
-  Heading, Image, keyframes,
+  Heading, keyframes,
   Link,
   Stack,
-  Text
+  Text,
+  Image
 } from "@chakra-ui/react";
 import React, {PropsWithChildren, useEffect, useState} from "react";
 import { motion } from "framer-motion";
@@ -14,7 +15,6 @@ import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Music from "@/components/Music";
 import Contact from "@/components/Contact";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import {useParams} from "next/navigation";
 
 const rotation = keyframes({
@@ -78,11 +78,12 @@ export default function Index() {
           bgColor={'black'}
         >
           <Image
-            src={'/img/noise_raw.jpg'}
+            src={'/img/noise.jpg'}
+            alt={'Background noise'}
             loading={'eager'}
             opacity={currentPage !== undefined ? 0.33 : 0.22}
-            minW={{ base: 'max(100vw, 100vh)' }}
-            minH={{ base: 'max(100vw, 100vh)' }}
+            minWidth={{ base: 'max(100vw, 100vh)' }}
+            minHeight={{ base: 'max(100vw, 100vh)' }}
             objectFit={'cover'}
             transition={'opacity 0.25s ease-in-out'}
             animation={`${rotation} 1300s linear infinite`}
