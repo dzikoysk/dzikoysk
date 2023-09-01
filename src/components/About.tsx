@@ -1,12 +1,15 @@
 import {Heading, Stack, Text} from "@chakra-ui/react";
+import Link from 'next/link'
 import React from "react";
 
 export default function About() {
   return (
     <>
-      <Heading paddingBottom={4}>
-        About
-      </Heading>
+      <Link href={'#about'}>
+        <Heading id={'about'} paddingBottom={4}>
+          About
+        </Heading>
+      </Link>
       <Stack width={'min(500px, 100%)'} >
         <Text>
           Hobbyist <Text as='span' color={'purple.300'}>'full-of-nothing-stack'</Text> developer involved in many open source activities. 💕

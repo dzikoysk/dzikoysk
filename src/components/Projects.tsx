@@ -112,7 +112,9 @@ type ProjectKey = keyof typeof projects
 export default function Projects() {
   return (
     <>
-      <Heading pb={4}>Projects</Heading>
+      <Link href={'#projects'}>
+        <Heading id={'projects'} pb={4}>Projects</Heading>
+      </Link>
       <Stack spacing={6}>
         {projects.map((project, index) => (
           <Stack

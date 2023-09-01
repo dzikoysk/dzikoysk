@@ -44,15 +44,21 @@ export default function Index() {
   const params = useParams()
   const [currentPage, setCurrentPage] = useState<SelectedPage | undefined>(undefined)
 
-  useEffect(() => {
-    const hash = window.location.hash
-    if (hash) setCurrentPage(hash.substring(1) as SelectedPage)
-  }, [params]);
-
   const togglePage = (selectedPage: SelectedPage | undefined) => {
-    setCurrentPage(currentPage === selectedPage ? undefined : selectedPage)
+    setCurrentPage(page => page === selectedPage ? undefined : selectedPage)
     router.push('/' + (currentPage === selectedPage ? `` : (selectedPage ? `#${selectedPage}` : '')))
   }
+
+  useEffect(() => {
+    const hash = window.location.hash
+    if (hash) {
+      const pageToSelect = hash.substring(1) as SelectedPage
+      setCurrentPage(pageToSelect)
+      setTimeout(() => {
+        document.getElementById(pageToSelect)?.scrollIntoView()
+      }, 150)
+    }
+  }, [params]);
 
   return (
     <>

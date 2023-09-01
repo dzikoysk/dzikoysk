@@ -1,5 +1,6 @@
 import {Flex, Heading, Stack, Text} from "@chakra-ui/react";
 import React from "react";
+import Link from "next/link";
 
 const transcriptions = [
   {
@@ -27,7 +28,9 @@ const transcriptions = [
 export default function Music() {
   return (
     <>
-      <Heading pb={4}>Transcriptions</Heading>
+      <Link href={'#music'}>
+        <Heading id={'music'} pb={4}>Transcriptions</Heading>
+      </Link>
       <Stack flexWrap={'wrap'} w={'min(500px, 100%)'} maxWidth={'min(100%, 500px)'}>
         {transcriptions.map((transcription, index) => (
           <MusicBox
