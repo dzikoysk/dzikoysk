@@ -105,7 +105,7 @@ export default function Index() {
             src={'/images/noise.jpg'}
             alt={'Background noise'}
             loading={'eager'}
-            opacity={currentPage !== undefined ? 0.4 : 0.29}
+            opacity={currentPage !== undefined ? 0.39 : 0.27}
             minWidth={{ base: 'max(100vw, 100vh)' }}
             minHeight={{ base: 'max(100vw, 100vh)' }}
             objectFit={'cover'}
