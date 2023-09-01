@@ -136,6 +136,7 @@ export default function Projects() {
                   <Stack
                     textAlign={'center'}
                     paddingTop={6}
+                    paddingX={2}
                   >
                     <Heading size="sm">{repository.title}</Heading>
                     <Text fontSize="xs">{repository.description}</Text>
