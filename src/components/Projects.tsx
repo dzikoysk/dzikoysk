@@ -88,13 +88,13 @@ const projects = [
       {
         title: 'dzikoysk/presence-of-mind',
         description: 'Personal utility Android app used to organize private backlog by mixing daily schedule tasks with habits, long-term goals, notes & things to learn',
-        link: 'https://github.com/dzikoysk/khangul',
+        link: 'https://github.com/dzikoysk/presence-of-mind',
         role: Role.OWNER
       },
       {
         title: 'dzikoysk/khangul',
         description: 'Hangul processor for Kotlin Multiplatform & JavaScript projects, based on reverse-engineered enhanced version of Branah keyboard algorithm',
-        link: 'https://github.com/dzikoysk/presence-of-mind',
+        link: 'https://github.com/dzikoysk/khangul',
         role: Role.OWNER
       },
       {
